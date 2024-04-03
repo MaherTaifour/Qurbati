@@ -1,0 +1,6 @@
+npm i bcrypt
+npm i -D @types/bcrypt
+
+npm i  @nestjs/typeorm typeorm mysql2 pg @nestjs/config
+
+npm install --save @nestjs/jwt
