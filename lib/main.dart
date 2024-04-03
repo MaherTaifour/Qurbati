@@ -11,11 +11,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //import 'package:url_launcher/url_launcher.dart';
-/*
-void main() {
-  runApp(MaterialApp(home: SignIn()));
-}
- */
 
 void main() {
   runApp(MyApp());
@@ -35,7 +30,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
-          home: ResetPassword(),
+          home: SignUp(),
         );
       },
     );
@@ -244,10 +239,6 @@ class SignUp extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) => const SignIn()));
                         },
-                        /*style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                            ),
-                         */
                         child: Text(
                           'Sign In',
                           style: TextStyle(
@@ -263,7 +254,7 @@ class SignUp extends StatelessWidget {
             ],
           ),
         ),
-      ), /*#388E3C*/
+      ),
     );
     // );
   }
@@ -443,10 +434,7 @@ class _SignInState extends State<SignIn> {
                           MaterialPageRoute(
                               builder: (context) => const ForgotPassword()));
                     },
-                    /*style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                            ),
-                         */
+
                     child: Text(
                       'Forgot Password?',
                       style: TextStyle(
@@ -510,10 +498,6 @@ class _SignInState extends State<SignIn> {
                               MaterialPageRoute(
                                   builder: (context) => const SignUp()));
                         },
-                        /*style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                            ),
-                         */
                         child: Text(
                           'Sign Up',
                           style: TextStyle(
@@ -534,143 +518,6 @@ class _SignInState extends State<SignIn> {
     //);
   }
 }
-/*
-class ForgotPassword extends StatelessWidget {
-  const ForgotPassword({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        //backgroundColor: Colors.green[900],
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 31.w,
-                    ),
-                    Container(
-                      width: 40.w,
-                      height: 40.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Color(0xFF07983D),
-                      ),
-                      child: BackButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const SignIn()));
-                        },
-                        style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Color(0xFF07983D)),
-                            iconColor: MaterialStateProperty.all(Colors.white)),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 50.0,
-                    ),
-                    Image.asset(
-                      'images/Group 9.png', // Replace 'images/sth.png' with the path to your logo image
-                      width: 204, // Adjust the width of the image
-                      height: 204, // Adjust the height of the image
-                      fit: BoxFit
-                          .contain, // Choose the BoxFit option that best fits your logo within the specified dimensions
-                    ),
-                  ],
-                ),
-                Text(
-                  'Forgot Password',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontFamily: 'Cairo',
-                    fontSize: 20.sp,
-                    color: Color(0xFF07983D),
-                  ),
-                ),
-                Text(
-                  'We will send you a link to reset your password',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Cairo',
-                      fontSize: 16.sp,
-                      color: Color(0xFF07983D)),
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Container(
-                  width: 325.w,
-                  height: 50.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(
-                      color: Color(0xFF07983D),
-                    ),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(vertical: 10.0),
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 10.0, vertical: 10.0),
-                          child: Icon(
-                            Icons.email_outlined,
-                            color: Color(0xFF07983D),
-                          ),
-                        ),
-                        hintText: 'Email',
-                        border: InputBorder.none,
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide.none,
-                        ),
-                        focusedBorder:
-                        UnderlineInputBorder(borderSide: BorderSide.none),
-                        prefixStyle: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16.sp,
-                          fontFamily: 'Cairo',
-                        )),
-                  ),
-                ),
-                SizedBox(height: 15.0),
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Color(0xFF07983D)),
-                    minimumSize: MaterialStateProperty.all(Size(325.w, 50.h)),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                          10.0), // Adjust the radius as needed
-                    )),
-                  ),
-                  child: Text(
-                    'Confirm',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Cairo',
-                      fontSize: 16.sp,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 100.0),
-              ],
-            ),
-          ),
-        ), /*#388E3C*/
-      ),
-    );
-  }
-}
- */
 class ResetPassword extends StatelessWidget {
   const ResetPassword ({super.key});
 
@@ -855,141 +702,11 @@ class ResetPassword extends StatelessWidget {
             ],
           ),
         ),
-      ), /*#388E3C*/
+      ),
     );
     // );
   }
 }
-/*
-class ForgotPasswordtwo extends StatelessWidget {
-  const ForgotPasswordtwo({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        //backgroundColor: Colors.green[900],
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Color(0xFF07983D),
-                  ),
-                  child: BackButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SignIn()));
-                    },
-                    style: ButtonStyle(
-                        backgroundColor:
-                        MaterialStateProperty.all(Color(0xFF07983D)),
-                        iconColor: MaterialStateProperty.all(Colors.white)),
-                  ),
-                ),
-
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 55.0,
-                    ),
-                    Row(
-                      children: [
-                        Image.asset(
-                          'images/Group 9.png', // Replace 'images/sth.png' with the path to your logo image
-                          width: 204, // Adjust the width of the image
-                          height: 204, // Adjust the height of the image
-                          fit: BoxFit
-                              .contain, // Choose the BoxFit option that best fits your logo within the specified dimensions
-                        ),
-                      ],
-                    ),
-                    Text(
-                      'Forgot Password',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontFamily: 'Cairo',
-                        fontSize: 20.0,
-                        color: Color(0xFF07983D),
-                      ),
-                    ),
-                    Text(
-                      'We will send you a link to reset your password',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Cairo',
-                          fontSize: 16.0,
-                          color: Color(0xFF07983D)),
-                    ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    Card(
-                      margin: EdgeInsets.all(10.0),
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          side: BorderSide(
-                            color: Color(0xFF07983D),
-                          )),
-                      child: ListTile(
-                        leading: Icon(
-                          Icons.mail_outline,
-                          color: Color(0xFF07983D),
-                        ),
-                        title: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Email',
-                            border: InputBorder.none,
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide.none,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 15.0),
-                    TextButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        backgroundColor:
-                        MaterialStateProperty.all(Color(0xFF07983D)),
-                        minimumSize: MaterialStateProperty.all(Size(325.0, 50.0)),
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              10.0), // Adjust the radius as needed
-                        )),
-                      ),
-                      child: Text(
-                        'Confirm',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Cairo',
-                          fontSize: 16.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 100.0),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        ), /*#388E3C*/
-      ),
-    );
-  }
-}
- */
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword ({super.key});
 
@@ -1139,7 +856,7 @@ class ForgotPassword extends StatelessWidget {
             ],
           ),
         ),
-      ), /*#388E3C*/
+      ),
     );
     // );
   }
